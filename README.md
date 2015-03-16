@@ -1,2 +1,2 @@
 # WhiteStore
-apple store
+Apple store
