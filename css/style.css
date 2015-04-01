@@ -142,16 +142,29 @@ ul.login a:hover, .consults a:hover{
 
 }
 
-.login-popup-content-way1 form ul{
+.login-popup-content-way1 form .form-option{
 	margin: 20px 0 0;
 	padding: 0;
 }
-.login-popup-content-way1 form ul li{
+.login-popup-content-way1 form .form-option-item{
 	display: inline-block;
 	list-style: none;
 	vertical-align: top;
 }
-.login-popup-content-way1 form ul li a.font-change{
+.login-popup-content-way1 form .form-option-item.niceCheck{
+	padding-left: 19px; 
+	display: inline-block;
+	cursor: pointer;
+	background: url('../img/checkbox_sprite.png')no-repeat 0px 0px;
+
+}
+.login-popup-content-way1 form .form-option-item.niceCheck:hover{
+	background: url('../img/checkbox_sprite.png')no-repeat 0px -19px;
+}
+.login-popup-content-way1 form .form-option-item.niceCheck input{
+	display: none;
+}
+.login-popup-content-way1 form .form-option-item a.font-change{
 	color: #666666;
 	font-size: 10px;
 	margin-left: 28px;

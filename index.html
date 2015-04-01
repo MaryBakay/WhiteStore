@@ -31,7 +31,7 @@
 				<div class="contacts">
 					<div class="wrapper">
 						<div class="logo"> 
-							<a href="index.html" title="Главная"><img src="img/logo.png" alt="logo"></a>
+							<a href="index2.html" title="Главная"><img src="img/logo.png" alt="logo"></a>
 						</div>
 						<div class="consults">
 							<a href="#">Онлайн Консультант</a><br>
@@ -48,7 +48,7 @@
 				<div class="wrapper">
 					<div class="layer_menu">
 						<ul class="main_menu">
-							<li><a href="index.html" title="Главная">Главная</a></li><!--
+							<li><a href="index2.html" title="Главная">Главная</a></li><!--
 							 --><li class="hover_list"><a href="katalog.html" title="Каталог">Каталог</a>
 							<ul class="hidden_list">
 								<li><a href="#" title="Компьютеры MAC">Компьютеры MAC</a></li><!--
@@ -1377,17 +1377,17 @@
 					</div>
 					<div class="form-input"><input type="password" name="password" placeholder="Ваш пароль">
 					</div>
-					<ul>
-						<li>
+					<div class="form-option">
+						<div class="form-option-item niceCheck">
 							<label>
-								<input type="checkbox" name="checkbox" checked>Запомнить меня
+								<input type="checkbox" name="checkbox" value="on" checked="true">Запомнить меня
 							</label>
-						</li>
-						<li>
+						</div>
+						<div class="form-option-item">
 							<a href="#" title="Забыли пароль" class="font-change">Забыли пароль</a><br>
 							<a href="#" title="У меня нет учетной записи" class="font-change">У меня нет учетной записи</a>
-						</li>
-					</ul>
+						</div>
+					</div>
 					<div class="but">
 						<div class="but_color">
 							<input type="submit" name="submit" value="Войти">
@@ -1418,10 +1418,71 @@
 
 
 
+<!-- Nice Checkboxes-->
 
+<script>
 
+	$(document).ready(function(){
+		$(".niceCheck").click(
+	/* при клике на чекбоксе меняем его вид и значение */
+		function(ev) {
+	 	ev.preventDefault();
+	    changeCheck($(this));
+	      
+		});
+	 
+	 
+	$(".niceCheck").each(
+	/* при загрузке страницы нужно проверить какое значение имеет чекбокс и в соответствии с ним выставить вид */
+		function() {
 
-
+	    changeCheckStart($(this));
+	      
+		});
+	$(".niceCheck").hover(function(){
+		var obj=$(this).find("input");
+		if (!obj.attr("checked")) {
+			$(this).css("background-position","0 -19px"); 
+		} else {
+			$(this).css("background-position","0 -39px"); 
+		}
+	});
+	 
+	});
+	 
+	function changeCheck(el)
+	/*
+	    функция смены вида и значения чекбокса
+	    el - span контейнер дял обычного чекбокса
+	    input - чекбокс
+	*/
+	{
+	     var el = el,
+	          input = el.find("input").eq(0);
+	     if(!input.attr("checked")) {
+	        el.css("background-position","0 -60px");   
+	        input.attr("checked", true)
+	    } else {
+	        el.css("background-position","0 0");   
+	        input.attr("checked", false)
+	    }
+	     return true;
+	}
+	 
+	function changeCheckStart(el)
+	/*
+	    если установлен атрибут checked, меняем вид чекбокса
+	*/
+	{
+	var el = el,
+	        input = el.find("input").eq(0);
+	      if(input.attr("checked")) {
+	        el.css("background-position","0 -60px");   
+	        }
+	     return true;
+	}
+	 
+	</script>
 	
 	
 	<!--Slider-->
