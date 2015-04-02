@@ -161,6 +161,12 @@ ul.login a:hover, .consults a:hover{
 .login-popup-content-way1 form .form-option-item.niceCheck:hover{
 	background: url('../img/checkbox_sprite.png')no-repeat 0px -19px;
 }
+.login-popup-content-way1 form .form-option-item.niceCheck.checked{
+	background: url('../img/checkbox_sprite.png')no-repeat 0px -60px;
+}
+.login-popup-content-way1 form .form-option-item.niceCheck.checked:hover{
+	background: url('../img/checkbox_sprite.png')no-repeat 0px -39px;
+}
 .login-popup-content-way1 form .form-option-item.niceCheck input{
 	display: none;
 }

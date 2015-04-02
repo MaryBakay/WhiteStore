@@ -1378,9 +1378,9 @@
 					<div class="form-input"><input type="password" name="password" placeholder="Ваш пароль">
 					</div>
 					<div class="form-option">
-						<div class="form-option-item niceCheck">
+						<div class="form-option-item niceCheck checked">
 							<label>
-								<input type="checkbox" name="checkbox" value="on" checked="true">Запомнить меня
+								<input type="checkbox" name="checkbox" value="on" checked>Запомнить меня
 							</label>
 						</div>
 						<div class="form-option-item">
@@ -1426,27 +1426,28 @@
 		$(".niceCheck").click(
 	/* при клике на чекбоксе меняем его вид и значение */
 		function(ev) {
-	 	ev.preventDefault();
-	    changeCheck($(this));
+		 	ev.preventDefault();
+		    changeCheck($(this));
 	      
 		});
 	 
 	 
-	$(".niceCheck").each(
+		$(".niceCheck").each(
 	/* при загрузке страницы нужно проверить какое значение имеет чекбокс и в соответствии с ним выставить вид */
 		function() {
 
-	    changeCheckStart($(this));
+	    	changeCheckStart($(this));
 	      
 		});
-	$(".niceCheck").hover(function(){
+		/*$(".niceCheck").hover(function(){
 		var obj=$(this).find("input");
-		if (!obj.attr("checked")) {
+		if (!obj.is(":checked")) {
 			$(this).css("background-position","0 -19px"); 
 		} else {
 			$(this).css("background-position","0 -39px"); 
 		}
-	});
+		
+	});*/
 	 
 	});
 	 
@@ -1459,11 +1460,11 @@
 	{
 	     var el = el,
 	          input = el.find("input").eq(0);
-	     if(!input.attr("checked")) {
-	        el.css("background-position","0 -60px");   
+	     if(!input.is(":checked")) {
+	        el.removeClass('checked');   
 	        input.attr("checked", true)
 	    } else {
-	        el.css("background-position","0 0");   
+	        el.addClass('checked');  
 	        input.attr("checked", false)
 	    }
 	     return true;
@@ -1476,8 +1477,8 @@
 	{
 	var el = el,
 	        input = el.find("input").eq(0);
-	      if(input.attr("checked")) {
-	        el.css("background-position","0 -60px");   
+	      if(input.is(':checked')) {
+	        el.addClass('checked');   
 	        }
 	     return true;
 	}
