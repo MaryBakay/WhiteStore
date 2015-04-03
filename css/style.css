@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-Thin.otf');
+  src: url('../fonts/HelveticaNeueCyr-UltraLight.otf');
+  font-weight: normal;
+  font-style: normal;
+}
 body{
 	background: #f3f3f4;
 	padding:0;
@@ -20,7 +27,7 @@ a:hover{
  }
 
 
- /*header*/
+ /*-------------header-------------------*/
 
  .header{
  	height: 180px;
@@ -174,6 +181,9 @@ ul.login a:hover, .consults a:hover{
 	color: #666666;
 	font-size: 10px;
 	margin-left: 28px;
+}
+.login-popup-content-way1 .but{
+	float: none;
 }
  .but a {
  	
@@ -339,7 +349,7 @@ a.credit{
 	font-size: 12px;
 }
 
- /*menu*/
+ /*----------------------------Main menu------------------------*/
 .layer_menu{
  	background: url("../img/layer.png") repeat;
  	border-radius: 5px;
@@ -476,7 +486,7 @@ ul.hidden_list > li a:hover{
 }
 
 
-/*banner*/
+/*---------------------------banner----------------------*/
 .banners {
 	margin-top: 45px;
 	clear: both;
@@ -504,7 +514,7 @@ ul.hidden_list > li a:hover{
 .banner_item span{
 	color: #cccccc;
 	font-size: 30px;
-	font-family: HelveticaNeueCE;
+	font-family: 'HelveticaNeueCE';
 	position: relative;
 	display: block;
 	top: 16%;
@@ -520,7 +530,7 @@ ul.hidden_list > li a:hover{
 	font-size: 17px;
 
 }
- /*footer*/
+ /* -----------------------footer-------------------------*/
  .footer{
  	height: 185px;
  	color: #545454;
